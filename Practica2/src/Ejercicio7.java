@@ -27,9 +27,16 @@ public class Ejercicio7 {
                 nr++;
             }
         }
-        int MediaSuma=Suma/ns;
-        int MediaResta=Resta/nr;
-        System.out.println(MediaSuma+" "+MediaResta);
+        if ((ns==0 ||nr == 0)){
+            System.out.println("Faltan numeros negativos o positivos, programa finalizado");
+        }
+        else{
+            int MediaSuma=Suma/ns;
+            int MediaResta=Resta/nr;
+            System.out.println("Media positiva: "+ MediaSuma);
+            System.out.println("Media negativa: "+ MediaResta);
+        }
+
     }
 
 }
