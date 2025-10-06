@@ -13,6 +13,9 @@ public class Ejercicio4 {
         for (int i = 0; i < arrayInt.length; i++) {
             Suma += arrayInt[i];
         }
-        System.out.println(Suma);
+        System.out.println("La suma de los numeros es: "+ Suma);
+        int Media = Suma/arrayInt.length;
+        System.out.println("La media de esos numeros es: "+ Media);
+
     }
 }
