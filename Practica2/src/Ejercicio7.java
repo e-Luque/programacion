@@ -16,7 +16,7 @@ public class Ejercicio7 {
             System.out.println("Introduce el valor Nº" + (i + 1));
             arrayInt[i] = scanner.nextInt();
         }
-        //A continuación se recorre el array y calcula cuántos números son positivos, cuántos negativos y cuántos ceros.
+        //A continuación calcula y muestra la media de los valores positivos y la de los valores negativos del array.
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i]>0){
                 Suma+=arrayInt[i];
