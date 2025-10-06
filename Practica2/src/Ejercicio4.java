@@ -10,6 +10,7 @@ public class Ejercicio4 {
             arrayInt[i] = i + 1;
 
         }
+        //Obtén la suma de todos ellos y la media.
         for (int i = 0; i < arrayInt.length; i++) {
             Suma += arrayInt[i];
         }
