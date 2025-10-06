@@ -23,6 +23,5 @@ public class Ejercicio5 {
 
 
         System.out.println("La suma es: " + suma);
-        scanner.close();
     }
 }
