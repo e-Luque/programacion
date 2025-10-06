@@ -5,11 +5,11 @@ public class Ejercicio2 {
         //Muestra por pantalla todos los elementos de un array de números enteros separados por un espacio.
         Scanner scanner = new Scanner(System.in);
         int[] arrayInt = new int[10];
-        for(int i=0; i<10; i++){
+        for(int i=0; i<arrayInt.length; i++){
             System.out.println("Introduce el valor Nº"+(i+1));
             arrayInt[i] = scanner.nextInt();
         }
-        for(int i=0; i<10; i++){
+        for(int i=0; i<arrayInt.length; i++){
             System.out.print(arrayInt[i]+" ");
         }
 
