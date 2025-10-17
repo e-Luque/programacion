@@ -1,5 +1,4 @@
 import java.util.Scanner;
-import java.util.Arrays;
 public class Ejercicio9 {
     public static void main(String[] args){
         int M = 0;
@@ -31,6 +30,5 @@ public class Ejercicio9 {
         }
         System.out.println("Valor máximo: "+mayor+" en la posición "+M );
         System.out.println("Valor mínimo: "+menor+" en la posición "+m );
-            System.out.println(Arrays.toString(ListaNumeros));
     }
 }
