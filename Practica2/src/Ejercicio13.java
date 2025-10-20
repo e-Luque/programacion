@@ -9,6 +9,7 @@ public class Ejercicio13 {
         int indice = 0;
         //Pida números por teclado hasta que el usuario introduzca un número negativo (ese no se añade).
         while (x>=0){
+            System.out.println("Añada un numero POSITIVO (Si pone un numero negativo se finaliza) ");
             x = scanner.nextInt();
             Numeros.add(x);
             indice++;
