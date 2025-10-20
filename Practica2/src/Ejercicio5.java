@@ -11,7 +11,7 @@ public class Ejercicio5 {
         double[] arrayInt = new double[tamaño];
 
         for (int i = 0; i < arrayInt.length; i++) {
-            arrayInt[i] = Math.random() * 9;
+            arrayInt[i] = Math.random() * 10;
         }
         for (int i = 0; i < arrayInt.length; i++) {
             System.out.println(arrayInt[i]);
