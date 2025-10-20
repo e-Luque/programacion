@@ -10,18 +10,24 @@ public class Ejercicio6 {
             System.out.println("Introduce el valor Nº" + (i + 1));
             arrayInt[i] = scanner.nextInt();
         }
+        int positivo = 0;
+        int negativo = 0;
+        int nulo = 0;
         //A continuación se recorre el array y calcula cuántos números son positivos, cuántos negativos y cuántos ceros.
         for (int i = 0; i < arrayInt.length; i++) {
             if (arrayInt[i]>0){
-                System.out.println("El numero "+arrayInt[i]+" es positivo");
+                positivo++;
             }
             if (arrayInt[i]==0){
-                System.out.println("El numero "+arrayInt[i]+" es nulo");
+                nulo++;
             }
             if (arrayInt[i]<0){
-                System.out.println("El numero "+arrayInt[i]+" es negativo");
+                negativo++;
             }
         }
+        System.out.println("Hay "+ positivo+ " numeros positivos");
+        System.out.println("Hay "+ negativo +" numeros negativos");
+        System.out.println("Hay "+ nulo+ " ceros");
     }
 
 }
