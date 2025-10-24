@@ -17,8 +17,10 @@ public class Ejercicio14 {
         }
         System.out.println("Escriba un nombre para buscar en la lista: ");
         String Nombre = scanner.nextLine();
+        int indice = Lista.indexOf(Nombre);
         if (Lista.contains(Nombre)){
-            System.out.println(Nombre+ " está en la lista");
+            System.out.println(Nombre+ " está en la lista en la posición: " + indice);
+
         }
         else{
             System.out.println(Nombre+ " no está en la lista");
