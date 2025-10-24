@@ -1,4 +1,5 @@
 # Programación
+![Ejemplo](assets/wp7250161.png)
 Repositorio dedicado a las practicas de programación de 1ºDAW
 * Cristian Luque Ruiz (e-Luque)
 * IES FCO ROMERO VARGAS
