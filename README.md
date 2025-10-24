@@ -1,5 +1,5 @@
 # Programación
-![LOGO_JAVA](https://github.com/e-Luque/programacion/tree/main/Assets/wp7250161.png)
+![LOGO_JAVA](https://github.com/e-Luque/programacion/tree/main/Assets/wp7250161.png?raw=true)
 Repositorio dedicado a las practicas de programación de 1ºDAW
 * Cristian Luque Ruiz (e-Luque)
 * IES FCO ROMERO VARGAS
