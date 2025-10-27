@@ -7,6 +7,7 @@ Repositorio dedicado a las practicas de programación de 1ºDAW
 #### PRÁCTICA 1 (NO SUBIDA)
 #### PRÁCTICA 2 (FINALIZADA)
 
+---
 
 # Práctica 2
 ## EJERCICIOS
