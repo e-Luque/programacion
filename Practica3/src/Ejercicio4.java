@@ -19,33 +19,32 @@ public class Ejercicio4 {
                 SumaI+=Tabla[i][j];
                 SumaTotal+=Tabla[i][j];
             }
+            System.out.printf("%-10s", SumaI);
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.printf("%-10s", SumaI);
             System.out.println();
         }
+
         for (int j = 0; j < Tabla[0].length; j++) {
-            int SumaJ = 0;
+            int Maximo = 0;
             for (int i = 0; i < Tabla.length; i++) {
-                SumaJ += Tabla[i][j];
-                SumaTotal+= Tabla[i][j];
+                if (Tabla[i][j] > Maximo) {
+                    Maximo = Tabla[i][j];
+                }
+
             }
             try {
                 Thread.sleep(2000);
             } catch (InterruptedException e) {
                 throw new RuntimeException(e);
             }
-            System.out.printf("%-10d", SumaJ);
-        }
-        try {
-            Thread.sleep(2000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            System.out.printf("%-10d", Maximo);
         }
         System.out.printf("%-10s", (SumaTotal));
     }
 
 }
+
