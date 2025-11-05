@@ -16,10 +16,10 @@ public class Ejercicio7 {
     public static void main(String[] args) {
         int[][] Tabla = new int[6][10];
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Introduce el maximo: ");
-        int max = scanner.nextInt();
         System.out.println("Introduce el minimo: ");
         int min = scanner.nextInt();
+        System.out.println("Introduce el maximo: ");
+        int max = scanner.nextInt();
         for (int i = 0; i < Tabla.length; i++) {
             for (int j = 0; j < Tabla[i].length; j++) {
                 Tabla[i][j] = (int) (Math.random() * (min - max + 1)) + max;
@@ -89,8 +89,16 @@ public class Ejercicio7 {
                     System.out.println("El numero: " + Tabla[i][j] + " Es primo en la posición: " + "[" + i + "]" + "[" + j + "]");
                 }
             }
-
         }
-
+        for (int i = 0; i < Tabla.length; i++) {
+            for (int j = 0; j < Tabla[i].length; j++) {
+                String estrellas = "";
+                for (int k = 0; k < Tabla[i][j]; k++) {
+                    estrellas += "*";
+                }
+                System.out.print(estrellas + " ");
+            }
+            System.out.println();
+        }
     }
 }
