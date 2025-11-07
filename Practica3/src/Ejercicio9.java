@@ -18,7 +18,7 @@ public class Ejercicio9 {
         for (int i = 0; i < Tablero.length; i++) {
             for (int j = 0; j < Tablero[i].length; j++) {
                 if ((Posicion).equals(Tablero[i][j])){
-                    System.out.println("El caballo se podrá mover en las siguientes posiciones: "+((i+1)>=8 || (i+1)<0 || (j-2)>=8 || (j-2)<0 ? "" : Tablero[i+1][j-2])+"  "+((i-1)>=8 || (i-1)<0 || (j-2)>=8 || (j-2)<0 ? "" :Tablero[i-1][j-2])+"  "+((i+2)>=8 || (i+2)<0 || (j-1)>=8 || (j-1)<0 ? "" :Tablero[i+2][j-1])+"  "+((i+2)>=8 || (i+2)<0 || (j+1)>=8 || (j+1)<0 ? "" :Tablero[i+2][j+1])+"  "+((i+1)>=8 || (i+1)<0 || (j+2)>=8 || (j+2)<0 ? "" :Tablero[i+1][j+2])+"  "+((i-1)>=8 || (i-1)<0 || (j+2)>=8 || (j+2)<0 ? "" :Tablero[i-1][j+2])+"  "+((i-2)>=8 || (i-2)<0 || (j-1)>=8 || (j-1)<0 ? "" :Tablero[i-2][j-1])+"  "+((i-2)>=8 || (i-2)<0 || (j+1)>=8 || (j+1)<0 ? "" :Tablero[i-2][j+1]));
+                    System.out.println("El caballo se podrá mover en las siguientes posiciones: "+((i+1)>=8 || (i+1)<0 || (j-2)>=8 || (j-2)<0 ? "" : Tablero[i+1][j-2]+"  ")+((i-1)>=8 || (i-1)<0 || (j-2)>=8 || (j-2)<0 ? "" :Tablero[i-1][j-2]+"  ")+((i+2)>=8 || (i+2)<0 || (j-1)>=8 || (j-1)<0 ? "" :Tablero[i+2][j-1]+"  ")+((i+2)>=8 || (i+2)<0 || (j+1)>=8 || (j+1)<0 ? "" :Tablero[i+2][j+1]+"  ")+((i+1)>=8 || (i+1)<0 || (j+2)>=8 || (j+2)<0 ? "" :Tablero[i+1][j+2]+"  ")+((i-1)>=8 || (i-1)<0 || (j+2)>=8 || (j+2)<0 ? "" :Tablero[i-1][j+2]+"  ")+((i-2)>=8 || (i-2)<0 || (j-1)>=8 || (j-1)<0 ? "" :Tablero[i-2][j-1]+"  ")+((i-2)>=8 || (i-2)<0 || (j+1)>=8 || (j+1)<0 ? "" :Tablero[i-2][j+1]));
                 }
             }
         }
