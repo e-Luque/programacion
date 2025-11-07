@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Ejercicio4 {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         int[][] Tabla = new int [4][5];
         Scanner scanner = new Scanner(System.in);
         for (int i = 0; i < Tabla.length; i++) {
@@ -20,11 +20,7 @@ public class Ejercicio4 {
                 SumaTotal+=Tabla[i][j];
             }
             System.out.printf("%-10s", SumaI);
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            Thread.sleep(2000);
             System.out.println();
         }
 
@@ -36,11 +32,7 @@ public class Ejercicio4 {
                 }
 
             }
-            try {
-                Thread.sleep(2000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
+            Thread.sleep(2000);
             System.out.printf("%-10d", Maximo);
         }
         System.out.printf("%-10s", (SumaTotal));
