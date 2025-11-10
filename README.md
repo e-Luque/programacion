@@ -6,7 +6,7 @@ Repositorio dedicado a las practicas de programación de 1ºDAW
 ### PRÁCTICAS REALIZADAS
 #### PRÁCTICA 1 (NO SUBIDA)
 #### PRÁCTICA 2 (FINALIZADA)
-
+#### PRACTICA 3 (FINALIZADA)
 ---
 
 # Práctica 2
@@ -106,7 +106,7 @@ Crea un programa que:
 * Elimine los valores duplicados manteniendo solo el primero que apareció.
 * Ordene la lista de menor a mayor y la muestre por pantalla.
 
-# Práctica 2
+# Práctica 3
 ## EJERCICIOS
 
 #### Ejercicio 1
