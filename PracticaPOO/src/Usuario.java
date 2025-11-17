@@ -37,7 +37,12 @@ public class Usuario {
     }
 
     public String getEmail() {
-        return this.email;
+        if(this.email.contains("@")){
+            return this.email;
+        }
+        else{
+            return "El Correo es incorrecto";
+        }
     }
 
     public String getContraseña() {
@@ -69,6 +74,7 @@ public class Usuario {
         }
     }
     public void setContraseña(String contraseña){this.contraseña=contraseña;}
+
     public Boolean checkUsuario(String email, String contraseña){
         return (this.email.equals(email) && this.contraseña.equals(contraseña));
     }
