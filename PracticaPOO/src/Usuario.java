@@ -68,17 +68,15 @@ public class Usuario {
             System.out.println("Email Invalido");
         }
     }
-    public void setContraseña(String contraseña){
-        this.contraseña=contraseña;
-    }
+    public void setContraseña(String contraseña){this.contraseña=contraseña;}
     public Boolean checkUsuario(String email, String contraseña){
         return (this.email.equals(email) && this.contraseña.equals(contraseña));
     }
 
 
     public String toString() {
-        System.out.println("Tu nombre es "+this.nombre+" "+this.apellidos+"\nTu codigo postal es "+this.codigoPostal+" y tu dirección es "+this.direccion);
-        return null;
+        return "Tu nombre es "+this.nombre+" "+this.apellidos+"\nTu codigo postal es "+this.codigoPostal+" y tu dirección es "+this.direccion;
+
     }
 }
 

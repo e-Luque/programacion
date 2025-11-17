@@ -31,6 +31,6 @@ public class Main {
         user.setEmail("Holapepe");
         System.out.println(user.getEmail());
         System.out.println(user.checkUsuario("e-Luque@gmail.com", "TuMadre"));
-        user.toString();
+        System.out.println(user.toString());
     }
 }
