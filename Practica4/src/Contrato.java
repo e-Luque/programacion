@@ -6,8 +6,8 @@ public class Contrato {
     //CONSTRUCTOR
     public Contrato(String fechaDeCreacion){
         this.fechaDeCreacion = fechaDeCreacion;
-        this.medico = new Medico();
-        this.hospital = new Hospital()
+        this.medico = medico;
+        this.hospital = hospital;
     }
     //METODOS GET Y SET
     public Hospital getHospital() {

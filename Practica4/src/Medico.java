@@ -8,14 +8,14 @@ public class Medico {
     private int fechaInicio;
     private Area area;
     //CONSTRUCTOR
-    public Medico(String dni, String nombre, int edad, String sexo, int sueldoBruto, int fechaInicio){
+    public Medico(String dni, String nombre, int edad, String sexo, int sueldoBruto, int fechaInicio, Area area){
         this.dni = dni;
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
         this.sueldoBruto = sueldoBruto;
         this.fechaInicio = fechaInicio;
-        this.area = new Area()
+        this.area = area;
     }
     //METODOS GET Y SET
     public String getNombre() {
@@ -34,15 +34,38 @@ public class Medico {
         return area;
     }
 
-    public String getEdad() {
+    public int getEdad() {
         return edad;
     }
 
-    public String getFechaInicio() {
+    public int getFechaInicio() {
         return fechaInicio;
     }
 
     public String getSexo() {
         return sexo;
+    }
+    public double calcularSueldoNeto(double retencion){
+        return (this.sueldoBruto-(sueldoBruto*(retencion/100)));
+    }
+    public int getAniosAntiguedad(){
+        return 2025 - this.fechaInicio;
+    }
+    public int calcularImpuestosAnuales(double tasaImpositiva){
+        return (int) ((double)this.sueldoBruto/(tasaImpositiva/100));
+    }
+    public boolean esMayorDeEdad(int mayoriaEdad){
+        return (this.edad>=mayoriaEdad);
+    }
+    public double proximoAumento(double porcentajeAumento, int aniosRequeridos){
+        double sueldoAumentado = sueldoBruto;
+        if(getAniosAntiguedad()>=aniosRequeridos){
+            sueldoAumentado = (this.sueldoBruto+(this.sueldoBruto*porcentajeAumento));
+        }
+        return sueldoAumentado;
+    }
+    public void cambiarArea(Area nuevaArea){
+        this.area = nuevaArea;
+
     }
 }
