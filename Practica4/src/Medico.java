@@ -60,7 +60,7 @@ public class Medico {
     public double proximoAumento(double porcentajeAumento, int aniosRequeridos){
         double sueldoAumentado = this.sueldoBruto;
         if(getAniosAntiguedad()>=aniosRequeridos){
-            sueldoAumentado = (this.sueldoBruto+(this.sueldoBruto*porcentajeAumento));
+            sueldoAumentado = (this.sueldoBruto+(this.sueldoBruto*(porcentajeAumento/100)));
         }
         return sueldoAumentado;
     }
