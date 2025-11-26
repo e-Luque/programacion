@@ -1,5 +1,5 @@
 # 🧠 Programación en Java
-![LOGO_JAVA](https://github.com/e-Luque/programacion/blob/main/Assets/wp7250161.png?raw=true)
+![LOGO_JAVA](https://github.com/e-Luque/programacion/blob/main/Assets/e-Luque.png?raw=true=)
 
 Repositorio dedicado a las prácticas de programación de **1ºDAW**  
 👨‍💻 Autor: Cristian Luque Ruiz (e-Luque)  
