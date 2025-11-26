@@ -15,8 +15,50 @@ Repositorio dedicado a las prácticas de programación de **1ºDAW**
 | 2  | Práctica 2       | ✅ Finalizada |
 | 3  | Práctica 3       | ✅ Finalizada |
 
----
+## Estructura del Repositorio
 
+(Herramienta usada: https://www.readmecodegen.com/file-tree/github-file-tree-visualizer)
+
+---
+```
+programacion/
+├── .gitignore
+├── Assets/
+│   ├── e-Luque.png
+│   └── wp7250161.png
+├── Practica2/
+│   ├── Practica2.iml
+│   └── src/
+│       ├── Ejercicio1.java
+│       ├── Ejercicio10.java
+│       ├── Ejercicio11.java
+│       ├── Ejercicio12.java
+│       ├── Ejercicio13.java
+│       ├── Ejercicio14.java
+│       ├── Ejercicio15.java
+│       ├── Ejercicio2.java
+│       ├── Ejercicio3.java
+│       ├── Ejercicio4.java
+│       ├── Ejercicio5.java
+│       ├── Ejercicio6.java
+│       ├── Ejercicio7.java
+│       ├── Ejercicio8.java
+│       └── Ejercicio9.java
+├── Practica3/
+│   ├── Practica3.iml
+│   └── src/
+│       ├── Ejercicio1.java
+│       ├── Ejercicio10.java
+│       ├── Ejercicio2.java
+│       ├── Ejercicio3.java
+│       ├── Ejercicio4.java
+│       ├── Ejercicio5.java
+│       ├── Ejercicio6.java
+│       ├── Ejercicio7.java
+│       └── Ejercicio9.java
+├── Programacion.iml
+└── README.md
+```
 # 🧮 Práctica 2 – Ejercicios
 
 ## 🔹 1. Fundamentos de Arrays
