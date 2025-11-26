@@ -37,6 +37,11 @@ public class Hospital {
         this.areas = areas;
     }
     public int getNumeroTotalMedicos(){
+        for(int i = 0; i<areas.size();i++){
+            this.areas.get(i).getNumMedicos()++
+        }
+    }
+    public double getProporcionMedicosArea(String idArea){
 
     }
 }

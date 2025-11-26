@@ -58,13 +58,15 @@ public class Medico {
         return (this.edad>=mayoriaEdad);
     }
     public double proximoAumento(double porcentajeAumento, int aniosRequeridos){
-        double sueldoAumentado = sueldoBruto;
+        double sueldoAumentado = this.sueldoBruto;
         if(getAniosAntiguedad()>=aniosRequeridos){
             sueldoAumentado = (this.sueldoBruto+(this.sueldoBruto*porcentajeAumento));
         }
         return sueldoAumentado;
     }
     public void cambiarArea(Area nuevaArea){
+        this.area.setNumMedicos(area.getNumMedicos()-1);
+        nuevaArea.sumarMedico();
         this.area = nuevaArea;
 
     }
