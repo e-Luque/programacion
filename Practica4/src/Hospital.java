@@ -36,4 +36,7 @@ public class Hospital {
     public void setAreas(ArrayList<Area> areas) {
         this.areas = areas;
     }
+    public int getNumeroTotalMedicos(){
+
+    }
 }

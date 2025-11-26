@@ -59,9 +59,12 @@ public class Area {
     }
     public String compararMedicos(Area otraArea){
         if (numMedicos > otraArea.getNumMedicos()) {
-            return nombre +" tiene mas medicos que "+ otraArea.getNombre()
+            return nombre +" tiene mas medicos que "+ otraArea.getNombre();
         }
-        else return otraArea.getNombre()+" tiene mas medicos que "+nombre
+        else return otraArea.getNombre()+" tiene mas medicos que "+nombre;
 
+    }
+    public int calcularCapacidadRestante(int capacidadMaxima){
+        capacidadMaxima - numMedicos
     }
 }
