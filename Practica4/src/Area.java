@@ -65,6 +65,6 @@ public class Area {
 
     }
     public int calcularCapacidadRestante(int capacidadMaxima){
-        capacidadMaxima - numMedicos
+        return capacidadMaxima - numMedicos;
     }
 }

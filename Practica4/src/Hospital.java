@@ -1,3 +1,4 @@
+import java.net.IDN;
 import java.util.ArrayList;
 
 public class Hospital {
@@ -37,11 +38,29 @@ public class Hospital {
         this.areas = areas;
     }
     public int getNumeroTotalMedicos(){
+        int suma = 0;
         for(int i = 0; i<areas.size();i++){
-            this.areas.get(i).getNumMedicos()++
+            suma+=this.areas.get(i).getNumMedicos();
         }
+        return suma;
     }
     public double getProporcionMedicosArea(String idArea){
+        double proporcion = 0.0;
+        for (int j = 0; j < areas.size(); j++) {
+            if (areas.get(j).getIdentificador().equals(idArea)){
+                proporcion = (double) areas.get(j).getNumMedicos()/ (double) getNumeroTotalMedicos();
+            }
+        }
+        if (proporcion != 0.0){
+            return proporcion;
+        }
+        else{
+            return null;
+        }
+    }
+    public boolean existeArea(String idArea){
+        for (int i = 0; i < areas.size(); i++) {
 
+        }
     }
 }
