@@ -1,10 +1,10 @@
 public class Contrato {
     //PARAMETROS
-    private String fechaDeCreacion;
+    private int fechaDeCreacion;
     private Medico medico;
     private Hospital hospital;
     //CONSTRUCTOR
-    public Contrato(String fechaDeCreacion){
+    public Contrato(int fechaDeCreacion){
         this.fechaDeCreacion = fechaDeCreacion;
         this.medico = medico;
         this.hospital = hospital;
@@ -18,7 +18,7 @@ public class Contrato {
         return medico;
     }
 
-    public String getFechaDeCreacion() {
+    public int getFechaDeCreacion() {
         return fechaDeCreacion;
     }
 
@@ -26,11 +26,20 @@ public class Contrato {
         this.hospital = hospital;
     }
 
-    public void setFechaDeCreacion(String fechaDeCreacion) {
+    public void setFechaDeCreacion(int fechaDeCreacion) {
         this.fechaDeCreacion = fechaDeCreacion;
     }
 
     public void setMedico(Medico medico) {
         this.medico = medico;
     }
+    //FUNCIONES
+    public boolean esDeAnio(int anio){
+        return anio==fechaDeCreacion;
+    }
+    public  int diasDeCreacion(int numeroDeDias,int diasDesdeInicio){
+        return 365*(diasDesdeInicio - numeroDeDias);
+    }
 }
+
+

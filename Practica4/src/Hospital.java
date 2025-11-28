@@ -51,16 +51,17 @@ public class Hospital {
                 proporcion = (double) areas.get(j).getNumMedicos()/ (double) getNumeroTotalMedicos();
             }
         }
-        if (proporcion != 0.0){
-            return proporcion;
-        }
-        else{
-            return null;
-        }
+        return proporcion;
     }
-    public boolean existeArea(String idArea){
-        for (int i = 0; i < areas.size(); i++) {
-
+    public boolean existeArea(String idArea) {
+        return buscarArea(idArea) != null;
+    }
+    public Area buscarArea(String idArea) {
+        for (int i = 0; i<areas.size(); i++) {
+            if (areas.get(i).getIdentificador().equals(idArea)) {
+                return areas.get(i);
+            }
         }
+        return null;
     }
 }
