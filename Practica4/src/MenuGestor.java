@@ -186,6 +186,50 @@ public class MenuGestor {
     }
 
     // ===============================
+//    OPCIÓN 5: MODIFICAR HOSPITAL
+// ===============================
+    private static void modificarHospital(Scanner sc) {
+
+        System.out.print("Introduce el nombre del hospital: ");
+        String nombre = sc.nextLine();
+
+        Hospital h = Main.buscarHospital(nombre);
+
+        if (h == null) {
+            System.out.println("Hospital no encontrado.");
+            return;
+        }
+
+        System.out.println("1. Cambiar Nombre");
+        System.out.println("2. Cambiar CIF");
+        System.out.print("Elige una opción: ");
+
+        int op = sc.nextInt();
+        sc.nextLine();
+
+        switch (op) {
+            case 1:
+                System.out.print("Nuevo nombre: ");
+                String nuevoNombre = sc.nextLine();
+                // Opción 1: si Hospital tiene setter
+                h.setNombre(nuevoNombre);
+                // Si no existe setNombre(), ver alternativas más abajo.
+                break;
+
+            case 2:
+                System.out.print("Nuevo CIF: ");
+                String nuevoCif = sc.nextLine();
+                h.setCif(nuevoCif);
+                break;
+
+            default:
+                System.out.println("Opción no válida.");
+                return;
+        }
+
+        System.out.println("Modificación realizada.");
+    }
+    // ===============================
     //   CALCULAR ANTIGÜEDAD
     // ===============================
     private static void calcularAntiguedad(Scanner sc) {
