@@ -9,11 +9,13 @@ Repositorio dedicado a las prácticas de programación de **1ºDAW**
 
 ## 📋 Prácticas Realizadas
 
-| Nº | Práctica        | Estado       |
-|----|------------------|--------------|
-| 1  | Práctica 1       | ❌ No subida |
-| 2  | Práctica 2       | ✅ Finalizada |
-| 3  | Práctica 3       | ✅ Finalizada |
+| Nº | Práctica   | Estado           |
+|----|------------|------------------|
+| 1  | Práctica 1 | ❌ No subida      |
+| 2  | Práctica 2 | ✅ Finalizada     |
+| 3  | Práctica 3 | ✅ Finalizada     |
+| 3  | Práctica 4 | ❌ Mal Finalizada |
+
 
 ## Estructura del Repositorio
 
