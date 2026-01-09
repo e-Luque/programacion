@@ -1,6 +1,5 @@
-package com.juego.clases;
+package com.juego.razas;
 
-import com.juego.razas.Razas;
 
 public class Enano extends Razas {
 

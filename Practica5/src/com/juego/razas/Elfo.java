@@ -1,7 +1,4 @@
-package com.juego.clases;
-
-import com.juego.razas.Razas;
-
+package com.juego.razas;
 public class Elfo extends Razas {
 
     public Elfo() {
