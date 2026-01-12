@@ -15,7 +15,7 @@ public class Personaje {
     public Personaje(String nombre,Razas raza,Clases clase){
         this.nombre = nombre;
         this.raza = raza;
-        this.clase = clase
+        this.clase = clase;
     }
 
     public String getNombre() {
@@ -36,5 +36,9 @@ public class Personaje {
 
     public int getDestreza() {
         return destreza;
+    }
+
+    public void crearPersonaje(){
+
     }
 }
