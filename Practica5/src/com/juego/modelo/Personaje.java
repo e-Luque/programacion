@@ -27,7 +27,7 @@ public class Personaje {
         this.inteligencia = raza.getInteligenciaBase()+ clase.getInteligenciaBonus();
         this.destreza = raza.getDestrezaBase() + clase.getDestrezaBonus();
         this.habilidades = clase.crearHabilidades();
-        this.vidaMaxima = this.vida
+        this.vidaMaxima = this.vida;
     }
 
     public String getNombre() {

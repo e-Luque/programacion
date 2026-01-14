@@ -1,11 +1,11 @@
 package com.juego.habilidades;
 
-public abstract class HabilidadBase implements Habilidades {
+public class HabilidadBase implements Habilidades {
 
-    protected String nombre;
-    protected int usosMaximos;
-    protected int usosRestantes;
-    protected int valor;
+    private String nombre;
+    private int usosMaximos;
+    private int usosRestantes;
+    private int valor;
 
     public HabilidadBase(String nombre, int usosMaximos, int valor) {
         this.nombre = nombre;
@@ -29,7 +29,7 @@ public abstract class HabilidadBase implements Habilidades {
         return usosRestantes > 0;
     }
 
-    protected void consumirUso() {
+    public void consumirUso() {
         usosRestantes--;
     }
 }
