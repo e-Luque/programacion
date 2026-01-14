@@ -39,7 +39,6 @@ public class Clases {
         return destrezaBonus;
     }
 
-    // 🔥 LO IMPORTANTE: crea nuevas habilidades
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 

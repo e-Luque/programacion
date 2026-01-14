@@ -54,7 +54,7 @@ public class Personaje {
 
     }
     public void recibirDanio(int cantidad) {
-        this.vida -= cantidad;
+        this.vida += cantidad;
         if (this.vida < 0) {
             this.vida = 0;
         }
