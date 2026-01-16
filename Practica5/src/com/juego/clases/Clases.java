@@ -3,7 +3,7 @@ import com.juego.habilidades.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Clases {
+public abstract class Clases {
 
     private String nombre;
     private int vidaMaxima;
@@ -38,4 +38,5 @@ public class Clases {
     public int getDestrezaBonus() {
         return destrezaBonus;
     }
+    public abstract List<Habilidades> crearHabilidades();
 }

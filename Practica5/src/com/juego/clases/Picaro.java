@@ -11,7 +11,6 @@ import java.util.List;
 public class Picaro extends Clases {
     private List<Habilidades> habilidades;
     public Picaro() {
-        this.habilidades = crearHabilidades();
         super(
                 "Picaro", // nombre
                 105,        // vida máxima
@@ -19,7 +18,9 @@ public class Picaro extends Clases {
                 0,          // inteligencia bonus
                 3          // destreza bonus
         );
+        this.habilidades = crearHabilidades();
     }
+    @Override
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 

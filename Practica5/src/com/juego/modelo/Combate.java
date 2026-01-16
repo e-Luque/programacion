@@ -10,4 +10,13 @@ public class Combate {
         this.jugador2 = jugador2;
     }
 
+    public Personaje getJugador1() {
+        return jugador1;
+    }
+    public Personaje getJugador2() {
+        return jugador2;
+    }
+    public void ataqueCuerpoACuerpo(Personaje jugador1, Personaje jugador2){
+
+    }
 }

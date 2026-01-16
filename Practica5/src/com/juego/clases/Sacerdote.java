@@ -11,7 +11,6 @@ import java.util.List;
 public class Sacerdote extends Clases {
     private List<Habilidades> habilidades;
     public Sacerdote() {
-        this.habilidades = crearHabilidades();
         super(
                 "Sacerdote", // nombre
                 95,        // vida máxima
@@ -19,7 +18,9 @@ public class Sacerdote extends Clases {
                 3,          // inteligencia bonus
                 0          // destreza bonus
         );
+        this.habilidades = crearHabilidades();
     }
+    @Override
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 

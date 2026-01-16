@@ -32,5 +32,6 @@ public class DanioADistancia implements Habilidades {
         if (!sePuedeUsar()) {
             return valor;
         }
+        return 0;
     }
 }

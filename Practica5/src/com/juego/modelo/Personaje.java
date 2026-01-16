@@ -11,7 +11,7 @@ public class Personaje {
     private Razas raza;
     private Clases clase;
     private int vida;
-    private int vidaMaxima
+    private int vidaMaxima;
     private int fuerza;
     private int inteligencia;
     private int destreza;
@@ -26,8 +26,8 @@ public class Personaje {
         this.fuerza = raza.getFuerzaBase() + clase.getFuerzaBonus();
         this.inteligencia = raza.getInteligenciaBase()+ clase.getInteligenciaBonus();
         this.destreza = raza.getDestrezaBase() + clase.getDestrezaBonus();
-        this.habilidades = clase.crearHabilidades();
         this.vidaMaxima = this.vida;
+        this.habilidades = clase.crearHabilidades();
     }
 
     public String getNombre() {
@@ -50,11 +50,23 @@ public class Personaje {
         return destreza;
     }
 
+    public Razas getRaza() {
+        return raza;
+    }
+
+    public Clases getClase() {
+        return clase;
+    }
+
+    public void setVida(int vida) {
+        this.vida = vida;
+    }
+
     public void crearPersonaje(){
 
     }
     public void recibirDanio(int cantidad) {
-        this.vida += cantidad;
+        this.vida -= cantidad;
         if (this.vida < 0) {
             this.vida = 0;
         }
@@ -66,4 +78,9 @@ public class Personaje {
             this.vida = this.vidaMaxima;
         }
     }
+
+    public List<Habilidades> getHabilidades() {
+        return habilidades;
+    }
+
 }
