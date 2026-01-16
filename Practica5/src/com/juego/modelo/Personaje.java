@@ -74,7 +74,7 @@ public class Personaje {
 
     public void curar(int cantidad) {
         this.vida += cantidad;
-        if (this.vida > this.vidaMaxima) {
+        if (this.vida > this.vidaMaxima)
             this.vida = this.vidaMaxima;
         }
     }
