@@ -6,30 +6,32 @@ public class DanioCuerpoACuerpo implements Habilidades {
     private int usosRestantes;
     private int valor;
 
-    public DanioCuerpoACuerpo() {
+    public DanioCuerpoACuerpo(String nombre, int usosMaximos, int valor) {
+        this.nombre = nombre;
+        this.usosMaximos = usosMaximos;
+        this.usosRestantes = this.usosMaximos;
+        this.valor = valor;
     }
 
     @Override
     public String getNombre() {
-        return "";
+        return this.nombre;
     }
 
     @Override
     public int getUsosRestantes() {
-        return 0;
+        return this.usosRestantes;
     }
 
     @Override
     public boolean sePuedeUsar() {
-        return false;
+        return this.usosRestantes>0;
     }
 
     @Override
     public int aplicar() {
         if (!sePuedeUsar()) {
-            return 0;
+            return valor;
         }
-        consumirUso();
-        return -valor; // negativo = daño
     }
 }

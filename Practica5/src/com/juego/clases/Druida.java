@@ -1,8 +1,17 @@
 package com.juego.clases;
 
-public class Druida extends Clases {
+import com.juego.habilidades.CuraCuerpoACuerpo;
+import com.juego.habilidades.DanioADistancia;
+import com.juego.habilidades.DanioCuerpoACuerpo;
+import com.juego.habilidades.Habilidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Druida extends Clases {
+    private List<Habilidades> habilidades;
     public Druida() {
+        this.habilidades = crearHabilidades();
         super(
                 "Druida", // nombre
                 100,        // vida máxima
@@ -10,5 +19,14 @@ public class Druida extends Clases {
                 1,          // inteligencia bonus
                 0          // destreza bonus
         );
+    }
+    public List<Habilidades> crearHabilidades() {
+        List<Habilidades> habilidades = new ArrayList<>();
+
+        habilidades.add(new DanioCuerpoACuerpo("Garra Salvaje",5,25));
+        habilidades.add(new CuraCuerpoACuerpo("Regeneración Natural",3,20));
+        habilidades.add(new DanioADistancia("Espina Creciente",1,45));
+
+        return habilidades;
     }
 }

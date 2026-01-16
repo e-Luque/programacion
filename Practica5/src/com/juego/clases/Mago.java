@@ -1,8 +1,17 @@
 package com.juego.clases;
 
-public class Mago extends Clases {
+import com.juego.habilidades.CuraCuerpoACuerpo;
+import com.juego.habilidades.DanioADistancia;
+import com.juego.habilidades.DanioCuerpoACuerpo;
+import com.juego.habilidades.Habilidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Mago extends Clases {
+    private List<Habilidades> habilidades;
     public Mago() {
+        this.habilidades = crearHabilidades();
         super(
                 "Mago", // nombre
                 90,        // vida máxima
@@ -10,5 +19,14 @@ public class Mago extends Clases {
                 3,          // inteligencia bonus
                 0          // destreza bonus
         );
+    }
+    public List<Habilidades> crearHabilidades() {
+        List<Habilidades> habilidades = new ArrayList<>();
+
+        habilidades.add(new DanioCuerpoACuerpo("Toque Arcano",5,25));
+        habilidades.add(new CuraCuerpoACuerpo("Restauración Etérea",3,50));
+        habilidades.add(new DanioADistancia("Proyectil Místico",1,60));
+
+        return habilidades;
     }
 }

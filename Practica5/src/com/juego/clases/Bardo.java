@@ -1,8 +1,17 @@
 package com.juego.clases;
 
-public class Bardo extends Clases {
+import com.juego.habilidades.CuraCuerpoACuerpo;
+import com.juego.habilidades.DanioADistancia;
+import com.juego.habilidades.DanioCuerpoACuerpo;
+import com.juego.habilidades.Habilidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Bardo extends Clases {
+    private List<Habilidades> habilidades;
     public Bardo() {
+        this.habilidades = crearHabilidades();
         super(
                 "Bardo", // nombre
                 90,        // vida máxima
@@ -10,5 +19,14 @@ public class Bardo extends Clases {
                 3,          // inteligencia bonus
                 0          // destreza bonus
         );
+    }
+    public List<Habilidades> crearHabilidades() {
+        List<Habilidades> habilidades = new ArrayList<>();
+
+        habilidades.add(new DanioCuerpoACuerpo("Golpe Armónico",5,20));
+        habilidades.add(new CuraCuerpoACuerpo("Balada Reconfortante",3,30));
+        habilidades.add(new DanioADistancia("Nota Discordante",1,50));
+
+        return habilidades;
     }
 }

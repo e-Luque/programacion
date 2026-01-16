@@ -38,14 +38,4 @@ public class Clases {
     public int getDestrezaBonus() {
         return destrezaBonus;
     }
-
-    public List<Habilidades> crearHabilidades() {
-        List<Habilidades> habilidades = new ArrayList<>();
-
-        habilidades.add(new DanioCuerpoACuerpo());
-        habilidades.add(new CuraCuerpoACuerpo());
-        habilidades.add(new DanioADistancia());
-
-        return habilidades;
-    }
 }

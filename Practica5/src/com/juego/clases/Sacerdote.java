@@ -1,8 +1,17 @@
 package com.juego.clases;
 
-public class Sacerdote extends Clases {
+import com.juego.habilidades.CuraCuerpoACuerpo;
+import com.juego.habilidades.DanioADistancia;
+import com.juego.habilidades.DanioCuerpoACuerpo;
+import com.juego.habilidades.Habilidades;
 
+import java.util.ArrayList;
+import java.util.List;
+
+public class Sacerdote extends Clases {
+    private List<Habilidades> habilidades;
     public Sacerdote() {
+        this.habilidades = crearHabilidades();
         super(
                 "Sacerdote", // nombre
                 95,        // vida máxima
@@ -10,5 +19,14 @@ public class Sacerdote extends Clases {
                 3,          // inteligencia bonus
                 0          // destreza bonus
         );
+    }
+    public List<Habilidades> crearHabilidades() {
+        List<Habilidades> habilidades = new ArrayList<>();
+
+        habilidades.add(new DanioCuerpoACuerpo("Puñalada Sombría",5,50));
+        habilidades.add(new CuraCuerpoACuerpo("Venda Rápida",3,20));
+        habilidades.add(new DanioADistancia("Daga Lanzada",1,15));
+
+        return habilidades;
     }
 }
