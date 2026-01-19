@@ -58,13 +58,14 @@ public class Personaje {
         return clase;
     }
 
+    public int getVidaMaxima() {
+        return vidaMaxima;
+    }
+
     public void setVida(int vida) {
         this.vida = vida;
     }
 
-    public void crearPersonaje(){
-
-    }
     public void recibirDanio(int cantidad) {
         this.vida -= cantidad;
         if (this.vida < 0) {
@@ -74,13 +75,13 @@ public class Personaje {
 
     public void curar(int cantidad) {
         this.vida += cantidad;
-        if (this.vida > this.vidaMaxima)
+        if (this.vida > this.vidaMaxima){
             this.vida = this.vidaMaxima;
         }
     }
 
     public List<Habilidades> getHabilidades() {
-        return habilidades;
+        return this.habilidades;
     }
 
 }

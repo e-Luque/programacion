@@ -24,9 +24,9 @@ public class Sacerdote extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Puñalada Sombría",5,50));
-        habilidades.add(new CuraCuerpoACuerpo("Venda Rápida",3,20));
-        habilidades.add(new DanioADistancia("Daga Lanzada",1,15));
+        habilidades.add(new DanioCuerpoACuerpo("Golpe Consagrado",5,50));
+        habilidades.add(new CuraCuerpoACuerpo("Llama Sagrada",3,20));
+        habilidades.add(new DanioADistancia("Rezo Sanador",1,15));
 
         return habilidades;
     }

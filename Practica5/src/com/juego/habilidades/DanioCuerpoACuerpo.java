@@ -30,7 +30,8 @@ public class DanioCuerpoACuerpo implements Habilidades {
 
     @Override
     public int aplicar() {
-        if (!sePuedeUsar()) {
+        if (sePuedeUsar()) {
+            this.usosRestantes--;
             return valor;
         }
         return 0;
