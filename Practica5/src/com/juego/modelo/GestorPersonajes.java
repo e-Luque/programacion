@@ -29,7 +29,7 @@ public class GestorPersonajes {
 
         // Personajes precargados
         personajes.add(new Personaje("Rey", new Humano(), new Guerrero()));
-        personajes.add(new Personaje("Luque", new Elfo(), new Bardo()));
+        personajes.add(new Personaje("Luque", new Humanoide(), new Robot()));
         personajes.add(new Personaje("Josemi", new Elfo(), new Druida()));
         personajes.add(new Personaje("Pablo", new Humano(),new Paladin()));
         personajes.add(new Personaje("Julia", new Enano(),new Mago()));
