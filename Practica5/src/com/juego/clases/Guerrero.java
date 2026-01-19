@@ -24,9 +24,9 @@ public class Guerrero extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Corte Devastador",5,30));
-        habilidades.add(new CuraCuerpoACuerpo("Segundo Aliento",3,20));
-        habilidades.add(new DanioADistancia("Lanzamiento de Hacha",1,40));
+        habilidades.add(new DanioCuerpoACuerpo("Corte Devastador",5,15));
+        habilidades.add(new CuraCuerpoACuerpo("Segundo Aliento",3,10));
+        habilidades.add(new DanioADistancia("Lanzamiento de Hacha",1,20));
 
         return habilidades;
     }

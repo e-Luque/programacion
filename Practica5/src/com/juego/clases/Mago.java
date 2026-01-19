@@ -24,9 +24,9 @@ public class Mago extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Toque Arcano",5,25));
-        habilidades.add(new CuraCuerpoACuerpo("Restauración Etérea",3,50));
-        habilidades.add(new DanioADistancia("Proyectil Místico",1,60));
+        habilidades.add(new DanioCuerpoACuerpo("Toque Arcano",5,15));
+        habilidades.add(new CuraCuerpoACuerpo("Restauración Etérea",3,25));
+        habilidades.add(new DanioADistancia("Proyectil Místico",1,30));
 
         return habilidades;
     }

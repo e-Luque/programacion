@@ -24,9 +24,9 @@ public class Bardo extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Golpe Armónico",5,20));
-        habilidades.add(new CuraCuerpoACuerpo("Balada Reconfortante",3,30));
-        habilidades.add(new DanioADistancia("Nota Discordante",1,50));
+        habilidades.add(new DanioCuerpoACuerpo("Golpe Armónico",5,10));
+        habilidades.add(new CuraCuerpoACuerpo("Balada Reconfortante",3,15));
+        habilidades.add(new DanioADistancia("Nota Discordante",1,25));
 
         return habilidades;
     }

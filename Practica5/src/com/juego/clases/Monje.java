@@ -25,9 +25,9 @@ public class Monje extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Puño del Dragón",5,35));
-        habilidades.add(new CuraCuerpoACuerpo("Flujo Interior",3,30));
-        habilidades.add(new DanioADistancia("Onda de Chi",1,40));
+        habilidades.add(new DanioCuerpoACuerpo("Puño del Dragón",5,20));
+        habilidades.add(new CuraCuerpoACuerpo("Flujo Interior",3,15));
+        habilidades.add(new DanioADistancia("Onda de Chi",1,20));
 
         return habilidades;
     }

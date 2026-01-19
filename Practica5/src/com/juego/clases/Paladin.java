@@ -24,9 +24,9 @@ public class Paladin extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Golpe Sagrado",5,40));
-        habilidades.add(new CuraCuerpoACuerpo("Imposición de Manos",3,35));
-        habilidades.add(new DanioADistancia("Juicio de Luz",1,50));
+        habilidades.add(new DanioCuerpoACuerpo("Golpe Sagrado",5,20));
+        habilidades.add(new CuraCuerpoACuerpo("Imposición de Manos",3,20));
+        habilidades.add(new DanioADistancia("Juicio de Luz",1,25));
 
         return habilidades;
     }

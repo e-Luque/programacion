@@ -80,9 +80,13 @@ public class Combate {
         }
 
         // Mostrar ganador
-        if (jugador1.getVida() <= 0) {
+        if (jugador1.getVida()==0 && jugador2.getVida()==0){
+            System.out.println(jugador1.getNombre()+" y "+jugador2.getNombre()+" han caido... es un empate!");
+        }
+        else if (jugador1.getVida() <= 0) {
             System.out.println(jugador1.getNombre() + " ha sido derrotado! " + jugador2.getNombre() + " gana!");
-        } else {
+        }
+        else{
             System.out.println(jugador2.getNombre() + " ha sido derrotado! " + jugador1.getNombre() + " gana!");
         }
     }

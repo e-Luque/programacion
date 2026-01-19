@@ -24,9 +24,9 @@ public class Picaro extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Puñalada Sombría",5,50));
-        habilidades.add(new CuraCuerpoACuerpo("Venda Rápida",3,20));
-        habilidades.add(new DanioADistancia("Daga Lanzada",1,15));
+        habilidades.add(new DanioCuerpoACuerpo("Puñalada Sombría",5,25));
+        habilidades.add(new CuraCuerpoACuerpo("Venda Rápida",3,10));
+        habilidades.add(new DanioADistancia("Daga Lanzada",1,10));
 
         return habilidades;
     }

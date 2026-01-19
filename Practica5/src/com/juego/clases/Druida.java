@@ -24,9 +24,9 @@ public class Druida extends Clases {
     public List<Habilidades> crearHabilidades() {
         List<Habilidades> habilidades = new ArrayList<>();
 
-        habilidades.add(new DanioCuerpoACuerpo("Garra Salvaje",5,25));
-        habilidades.add(new CuraCuerpoACuerpo("Regeneración Natural",3,20));
-        habilidades.add(new DanioADistancia("Espina Creciente",1,45));
+        habilidades.add(new DanioCuerpoACuerpo("Garra Salvaje",5,15));
+        habilidades.add(new CuraCuerpoACuerpo("Regeneración Natural",3,10));
+        habilidades.add(new DanioADistancia("Espina Creciente",1,25));
 
         return habilidades;
     }
