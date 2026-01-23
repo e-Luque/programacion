@@ -46,6 +46,10 @@ public class Combate {
                 System.out.println(jugador1.getNombre() + " usa " + jugador1.getHabilidades().get(2).getNombre() + " y causa " + efecto + " de daño!");
             }
 
+            else if (eleccion1 > 3 || eleccion1 < 1){
+                System.out.println(jugador1.getNombre()+" ha fallado!");
+            }
+
             System.out.println("---------------------------------------");
 
             // Habilidades de jugador2
@@ -59,7 +63,6 @@ public class Combate {
             }
             System.out.print("Elige una habilidad: ");
             int eleccion2 = scanner.nextInt();
-
             if (eleccion2 == 1){
                 int efecto = jugador2.getHabilidades().get(0).aplicar()* jugador2.getFuerza();
                 jugador1.recibirDanio(efecto);
@@ -74,6 +77,9 @@ public class Combate {
                 int efecto = jugador2.getHabilidades().get(2).aplicar()* jugador2.getDestreza();
                 jugador1.recibirDanio(efecto);
                 System.out.println(jugador2.getNombre() + " usa " + jugador2.getHabilidades().get(2).getNombre() + " y causa " + efecto + " de daño!");
+            }
+            else if (eleccion2 > 3 || eleccion2 < 1){
+                System.out.println(jugador2.getNombre()+" ha fallado!");
             }
 
             System.out.println("=======================================\n");

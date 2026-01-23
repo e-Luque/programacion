@@ -117,6 +117,9 @@ public class Vista {
                 gestor.agregarPersonaje(personajeCreado);
                 System.out.println("\nPersonaje " + nombre + " creado con éxito!\n");
             }
+            else if(opcion>3 || opcion<1){
+                System.out.println("OPCIÓN INCORRECTA, POR FAVOR, VUELVE A INTENTARLO");
+            }
         }
 
         System.out.println("\n¡Gracias por jugar! Hasta la próxima.");
