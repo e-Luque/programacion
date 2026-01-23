@@ -50,14 +50,6 @@ public class Personaje {
         return destreza;
     }
 
-    public Razas getRaza() {
-        return raza;
-    }
-
-    public Clases getClase() {
-        return clase;
-    }
-
     public int getVidaMaxima() {
         return vidaMaxima;
     }

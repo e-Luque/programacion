@@ -9,7 +9,7 @@ public class Combate {
 
     public void iniciarCombate(Personaje jugador1, Personaje jugador2){
         while (jugador1.getVida()>0 && jugador2.getVida()>0) {
-
+            int contador = 1;
             // Mostrar vidas con un "barra de vida" visual
             System.out.println("=======================================");
             System.out.println("        ESTADO DEL COMBATE");
@@ -17,7 +17,8 @@ public class Combate {
             System.out.printf("%s : %d/%d HP\n", jugador1.getNombre(), jugador1.getVida(), jugador1.getVidaMaxima());
             System.out.printf("%s : %d/%d HP\n", jugador2.getNombre(), jugador2.getVida(), jugador2.getVidaMaxima());
             System.out.println("---------------------------------------");
-
+            System.out.println("        TURNO: "+contador);
+            System.out.println("---------------------------------------");
             // Habilidades de jugador1
             System.out.println("HABILIDADES DE " + jugador1.getNombre());
             for (int i = 0; i < jugador1.getHabilidades().size(); i++) {
@@ -81,6 +82,7 @@ public class Combate {
             else if (eleccion2 > 3 || eleccion2 < 1){
                 System.out.println(jugador2.getNombre()+" ha fallado!");
             }
+            contador++;
 
             System.out.println("=======================================\n");
         }
