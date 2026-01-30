@@ -67,7 +67,42 @@ programacion/
 │       ├── Hospital.java
 │       ├── Main.java
 │       ├── Medico.java
-│       └── MenuGestor.java
+│       ├── MenuGestor.java
+│       └── Paciente.java
+├── Practica5/
+│   ├── Practica5.iml
+│   └── src/
+│       ├── Main.java
+│       └── com/
+│           └── juego/
+│               ├── clases/
+│               │   ├── Bardo.java
+│               │   ├── Clases.java
+│               │   ├── Druida.java
+│               │   ├── Guerrero.java
+│               │   ├── Mago.java
+│               │   ├── Monje.java
+│               │   ├── Paladin.java
+│               │   ├── Picaro.java
+│               │   ├── Robot.java
+│               │   └── Sacerdote.java
+│               ├── habilidades/
+│               │   ├── CuraCuerpoACuerpo.java
+│               │   ├── DanioADistancia.java
+│               │   ├── DanioCuerpoACuerpo.java
+│               │   └── Habilidades.java
+│               ├── modelo/
+│               │   ├── Combate.java
+│               │   ├── GestorPersonajes.java
+│               │   └── Personaje.java
+│               ├── presentacion/
+│               │   └── Vista.java
+│               └── razas/
+│                   ├── Elfo.java
+│                   ├── Enano.java
+│                   ├── Humano.java
+│                   ├── Humanoide.java
+│                   └── Razas.java
 ├── PracticaPOO/
 │   ├── PracticaPOO.iml
 │   └── src/
