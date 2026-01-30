@@ -14,7 +14,8 @@ Repositorio dedicado a las prácticas de programación de **1ºDAW**
 | 1  | Práctica 1 | ❌ No subida      |
 | 2  | Práctica 2 | ✅ Finalizada     |
 | 3  | Práctica 3 | ✅ Finalizada     |
-| 3  | Práctica 4 | ❌ Mal Finalizada |
+| 4  | Práctica 4 | ❌ Mal Finalizada |
+| 5  | Práctica 5 | ✅ Finalizada |
 
 
 ## Estructura del Repositorio
