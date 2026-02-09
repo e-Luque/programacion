@@ -11,5 +11,8 @@ public class Main {
         Bloque2 bloque2 = new Bloque2();
         bloque2.buscarGremio("Magos");
         bloque2.buscarGremio("Guerreros");
+        bloque2.buscarBotin("Trasgo");
+        bloque2.modificarEstadisticas("Conan","Fuerza",10);
+        bloque2.buscarTraidores("Judas");
     }
 }
