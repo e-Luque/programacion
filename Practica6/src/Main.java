@@ -35,6 +35,13 @@ public class Main {
         System.out.println("-----------------------------");
         System.out.println("El buscador de traidores\n-----------------------------");
         bloque2.buscarTraidores("Judas");
+        bloque2.buscarGremio("Guerreros");
         System.out.println("-----------------------------");
+        //BLOQUE 3: COMPROBACIONES:
+        Bloque3 bloque3 = new Bloque3();
+        System.out.println("El Sistema de Comercio y Precios Dinámicos\n-----------------------");
+        bloque3.calcularPreciosTransaccion("Capital");
+        bloque3.calcularPreciosTransaccion("Pueblo");
+
     }
 }
