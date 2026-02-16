@@ -39,15 +39,25 @@ public class Tesoreria {
                 return canciones.get(i).generaRegalias();
             }
         }
-        for (int i = 0; i < podcasts.size(); i++) {
-            if (nombre.equals(podcasts.get(i).getNombre())){
-                return podcasts.get(i).generaRegalias();
-            }
-        }
         for (int i = 0; i < audiolibros.size(); i++) {
             if (nombre.equals(audiolibros.get(i).getNombre())){
                 return audiolibros.get(i).generaRegalias();
             }
         }
+        return false;
+    }
+    public double calcularPago() {
+        double dinero = 0;
+        for (int i = 0; i < canciones.size(); i++) {
+            if (canciones.get(i).generaRegalias()){
+                dinero = dinero+1;
+            }
+        }
+        for (int i = 0; i < audiolibros.size(); i++) {
+            if (audiolibros.get(i).generaRegalias()){
+                dinero = dinero+1;
+            }
+        }
+        return dinero;
     }
 }

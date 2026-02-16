@@ -25,6 +25,6 @@ public class Podcasts {
     }
 
     public boolean generaRegalias(){
-        return true
+        return false
     }
 }
