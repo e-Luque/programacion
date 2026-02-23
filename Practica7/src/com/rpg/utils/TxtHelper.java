@@ -14,7 +14,6 @@ public class TxtHelper {
             for (String linea: lineas) {
                 System.out.println(linea);
                 List<Ciudades> ciudades = new Ciudades();
-
             }
         } catch (IOException e) {
             System.out.println("No se ha podido abrir el fichero.");
