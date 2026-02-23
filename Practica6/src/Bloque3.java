@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.PriorityQueue;
 
 public class Bloque3 {
     private HashMap<String, Double> preciosBase;
@@ -43,6 +44,9 @@ public class Bloque3 {
         magoHabilidades.put("Tormenta Arcana", false);
         magoHabilidades.put("Escudo Mágico", false);
         claseHabilidades.put("Mago", magoHabilidades);
+        //----------------------------------------
+        //Simulador de Economía de Subastas (Auction House)
+        HashMap<String, PriorityQueue<Double>>
     }
     public void calcularPreciosTransaccion(String nombreCiudad) {
         if (!ciudadesStock.containsKey(nombreCiudad)) {
