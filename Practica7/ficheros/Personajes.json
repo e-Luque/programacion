@@ -4,5 +4,11 @@
     "raza": "Humano",
     "nivel": 20,
     "equipoIds": ["E01"]
+  },
+  {
+    "nombre": "Luque",
+    "raza": "Androide",
+    "nivel": 20,
+    "equipoIds": ["W01"]
   }
 ]

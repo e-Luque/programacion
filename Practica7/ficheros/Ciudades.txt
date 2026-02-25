@@ -1,2 +1,12 @@
 Minas_Tirith;20000;Soleado;3
 Isengard;5000;Nublado;8
+Rivendel;3000;Templado;2
+Rohan;15000;Ventoso;6
+Gondor;25000;Soleado;5
+Mordor;50000;Seco;10
+Bree;1200;Lluvioso;4
+Helms_Deep;800;Frío;7
+Valinor;100000;Primaveral;1
+Dale;6000;Continental;5
+Khazad_Dum;10000;Subterráneo;9
+Dol_Guldur;4000;Húmedo;8
