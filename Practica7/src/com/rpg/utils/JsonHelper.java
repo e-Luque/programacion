@@ -27,7 +27,7 @@ public class JsonHelper {
     public List<Items> leerItems(){
         Gson gson = new Gson();
         List<Items> items = new ArrayList<>();
-        try (FileReader reader = new FileReader("Practica7\\ficheros\\Personajes.json")) {
+        try (FileReader reader = new FileReader("Practica7\\ficheros\\Items.json")) {
             Type listaTipo = new TypeToken<List<Items>>() {}.getType();
             items = gson.fromJson(reader, listaTipo);
         } catch (IOException e) {

@@ -19,6 +19,7 @@ public class GestionMundo {
         listaCiudades = txtHelper.leerCiudades();
         JsonHelper jsonHelper = new JsonHelper();
         listaPersonajes = jsonHelper.leerPersonajes();
+        listaItems = jsonHelper.leerItems();
     }
 
     public List<Ciudades> getListaCiudades() {
