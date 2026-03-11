@@ -5,7 +5,9 @@ import com.rpg.model.Items;
 import com.rpg.model.Personajes;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Writer;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.List;
@@ -34,5 +36,14 @@ public class JsonHelper {
             System.out.println("No se ha podido abrir el fichero.");
         }
         return items;
+    }
+    public <T> void writeList(String path, List<T> lista) {
+        try (Writer writer = new FileWriter(path)) {
+            Gson gson = new Gson();
+            gson.toJson(lista, writer);
+            System.out.println("JSON escrito correctamente en " + path);
+        } catch (IOException e) {
+            System.out.println("No se ha podido escribir el archivo: " + path);
+        }
     }
 }

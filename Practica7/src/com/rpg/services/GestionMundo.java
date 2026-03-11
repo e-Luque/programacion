@@ -7,8 +7,10 @@ import com.rpg.model.Ciudades;
 import com.rpg.model.Items;
 import com.rpg.model.Personajes;
 import com.rpg.utils.JsonHelper;
+import com.rpg.utils.LoggerCustom;
 import com.rpg.utils.TxtHelper;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Scanner;
 
@@ -16,7 +18,11 @@ public class GestionMundo {
     private List<Ciudades> listaCiudades;
     private List<Personajes> listaPersonajes;
     private List<Items> listaItems;
+    private HashMap<String,Items> mapaItems;
+    private LoggerCustom loggerCustom;
     public GestionMundo(){
+        this.loggerCustom = new LoggerCustom();
+        this.mapaItems = new HashMap<>();
     }
     public void cargarTodo() throws RPGDataException{
         try{
@@ -25,7 +31,9 @@ public class GestionMundo {
             JsonHelper jsonHelper = new JsonHelper();
             listaPersonajes = jsonHelper.leerPersonajes();
             listaItems = jsonHelper.leerItems();
-
+            for (Items item: listaItems){
+                this.mapaItems.put(item.getId(), item);
+            }
             for (int i = 0; i < listaPersonajes.size(); i++) {
                 if (listaPersonajes.get(i).getNivel()<0){
                     throw new DatoInvalidoException("Dato Invalido");
@@ -34,26 +42,25 @@ public class GestionMundo {
         }
         catch (DatoInvalidoException e){
             System.err.println("Nivel Invalido");
+            loggerCustom.escribirLog(e.getMessage());
         }
     }
     public void crearPersonaje(String nombre, String raza, int nivel, List<String> idsItems) throws RPGDataException {
-        Scanner scanner = new Scanner(System.in);
         try{
-            System.out.println("Introduzca el nombre");
-            String nombre = scanner.nextLine();
-            System.out.println("Introduzca el nivel");
-            Integer nivel = scanner.nextInt();
-            if (nivel < 0){
-                throw new DatoInvalidoException("Nivel Invalido");
+
+            for (String id : idsItems) {
+                if (!mapaItems.containsKey(id)) {
+                    throw new RecursoNoEncontradoException("El Item no Existe");
+                }
             }
-            System.out.println("Introduzca el ID del equipo");
-            for (int i = 0; i < listaItems.size(); i++) {
-                System.out.println(listaItems.get(i).getId() + " - " + listaItems.get(i).getNombre());
-            }
-            String ID = scanner.nextLine();
-            if (!listaItems.contains(ID)){
-                throw new RecursoNoEncontradoException("El Item no Existe");
-            }
+
+            Personajes personaje = new Personajes(nombre, raza, nivel, idsItems);
+            listaPersonajes.add(personaje);
+
+        }
+        catch (RecursoNoEncontradoException e){
+            System.err.println("El item no existe");
+            loggerCustom.escribirLog(e.getMessage());
         }
     }
 

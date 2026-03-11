@@ -16,7 +16,6 @@ public class TxtHelper {
         try {
             List<String> lineas = Files.readAllLines (Paths.get("Practica7\\ficheros\\Ciudades.txt"));
             for (String linea: lineas) {
-                System.out.println(linea);
                 String[] s = linea.split(";");
                 Ciudades c = new Ciudades(
                         s[0],
