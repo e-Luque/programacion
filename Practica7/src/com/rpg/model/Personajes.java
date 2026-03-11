@@ -8,11 +8,11 @@ public class Personajes {
     private String raza;
     private Integer nivel;
     private List<String> equipoID;
-    public Personajes(String nombre, String raza, Integer nivel){
+    public Personajes(String nombre, String raza, Integer nivel, List<String> equipoID){
         this.nombre = nombre;
         this.raza = raza;
         this.nivel = nivel;
-        this.equipoID = new ArrayList<>();
+        this.equipoID = equipoID;
     }
 
     public String getNombre() {
