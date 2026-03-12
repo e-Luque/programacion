@@ -63,7 +63,10 @@ public class GestionMundo {
             loggerCustom.escribirLog(e.getMessage());
         }
     }
-
+    public void guardarCambios(){
+        JsonHelper jsonHelper = new JsonHelper();
+        jsonHelper.escribirJSON("Practica7/ficheros/Personajes.json", listaPersonajes);
+    }
     public List<Ciudades> getListaCiudades() {
         return listaCiudades;
     }

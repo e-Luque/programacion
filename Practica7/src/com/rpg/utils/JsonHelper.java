@@ -1,5 +1,6 @@
 package com.rpg.utils;
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import com.rpg.model.Items;
 import com.rpg.model.Personajes;
@@ -37,11 +38,10 @@ public class JsonHelper {
         }
         return items;
     }
-    public <T> void writeList(String path, List<T> lista) {
+    public <T> void escribirJSON(String path, List<T> lista) {
         try (Writer writer = new FileWriter(path)) {
-            Gson gson = new Gson();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
             gson.toJson(lista, writer);
-            System.out.println("JSON escrito correctamente en " + path);
         } catch (IOException e) {
             System.out.println("No se ha podido escribir el archivo: " + path);
         }

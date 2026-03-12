@@ -2,13 +2,29 @@
   {
     "nombre": "Aragorn",
     "raza": "Humano",
-    "nivel": 20,
-    "equipoId": "P01"
+    "nivel": 20
   },
   {
     "nombre": "Luque",
     "raza": "Androide",
-    "nivel": 1,
-    "equipoId": "W01"
+    "nivel": 1
+  },
+  {
+    "nombre": "Evelyn",
+    "raza": "Humana",
+    "nivel": 5,
+    "equipoID": [
+      "W01",
+      "P01"
+    ]
+  },
+  {
+    "nombre": "Evelyn",
+    "raza": "Humana",
+    "nivel": 5,
+    "equipoID": [
+      "W01",
+      "P01"
+    ]
   }
 ]
