@@ -9,13 +9,15 @@ Repositorio dedicado a las prácticas de programación de **1ºDAW**
 
 ## 📋 Prácticas Realizadas
 
-| Nº | Práctica   | Estado           |
-|----|------------|------------------|
-| 1  | Práctica 1 | ❌ No subida      |
-| 2  | Práctica 2 | ✅ Finalizada     |
-| 3  | Práctica 3 | ✅ Finalizada     |
-| 4  | Práctica 4 | ❌ Mal Finalizada |
-| 5  | Práctica 5 | ✅ Finalizada |
+| Nº | Práctica   | Estado             |
+|----|------------|--------------------|
+| 1  | Práctica 1 | ❌ No subida        |
+| 2  | Práctica 2 | ✅ Finalizada       |
+| 3  | Práctica 3 | ✅ Finalizada       |
+| 4  | Práctica 4 | ❌ Mal Finalizada   |
+| 5  | Práctica 5 | ✅ Finalizada       |
+| 6  | Práctica 6 | 🟨 Casi Finalizada |
+| 7  | Práctica 7 | ✅ Finalizada       |
 
 
 ## Estructura del Repositorio
@@ -104,6 +106,13 @@ programacion/
 │                   ├── Humano.java
 │                   ├── Humanoide.java
 │                   └── Razas.java
+├── Practica6/
+│   ├── Practica6.iml
+│   └── src/
+│       ├── Bloque1.java
+│       ├── Bloque2.java
+│       ├── Bloque3.java
+│       └── Main.java
 ├── PracticaPOO/
 │   ├── PracticaPOO.iml
 │   └── src/
@@ -112,6 +121,9 @@ programacion/
 ├── Programacion.iml
 └── README.md
 ```
+# 📋 Ejercicios de las Practicas:
+
+
 # 🧮 Práctica 2 – Ejercicios
 
 ## 🔹 1. Fundamentos de Arrays
