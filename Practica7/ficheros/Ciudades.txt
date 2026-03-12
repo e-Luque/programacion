@@ -9,4 +9,4 @@ Helms_Deep;800;Frío;7
 Valinor;100000;Primaveral;1
 Dale;6000;Continental;5
 Khazad_Dum;10000;Subterráneo;9
-Dol_Guldur;4000;Húmedo;8
+Dol_Guldur;4000;Húmedo;10

@@ -1,6 +1,7 @@
 package com.rpg.services;
 
 import com.rpg.handler.DatoInvalidoException;
+import com.rpg.handler.FormatoInvalidoException;
 import com.rpg.handler.RPGDataException;
 import com.rpg.handler.RecursoNoEncontradoException;
 import com.rpg.model.Ciudades;
@@ -50,6 +51,7 @@ public class GestionMundo {
 
             for (String id : idsItems) {
                 if (!mapaItems.containsKey(id)) {
+                    loggerCustom.escribirLog("El Item no Existe");
                     throw new RecursoNoEncontradoException("El Item no Existe");
                 }
             }
@@ -58,12 +60,11 @@ public class GestionMundo {
             listaPersonajes.add(personaje);
 
         }
-        catch (RecursoNoEncontradoException e){
-            System.err.println("El item no existe");
-            loggerCustom.escribirLog(e.getMessage());
+        catch (Exception e){
+            loggerCustom.escribirLog("No se ha podido crear el personaje "+e.getMessage());
         }
     }
-    public void guardarCambios(){
+    public void guardarCambios() throws FormatoInvalidoException {
         JsonHelper jsonHelper = new JsonHelper();
         jsonHelper.escribirJSON("Practica7/ficheros/Personajes.json", listaPersonajes);
     }

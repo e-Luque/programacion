@@ -1,5 +1,7 @@
 package com.rpg.utils;
 
+import com.rpg.handler.FormatoInvalidoException;
+import com.rpg.handler.RPGDataException;
 import com.rpg.model.Ciudades;
 
 import java.io.IOException;
@@ -9,9 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TxtHelper {
+    private LoggerCustom loggerCustom;
     public TxtHelper(){
+        this.loggerCustom = new LoggerCustom();
     }
-    public List<Ciudades> leerCiudades(){
+    public List<Ciudades> leerCiudades() throws FormatoInvalidoException {
         List<Ciudades> ciudades = new ArrayList<>();
         try {
             List<String> lineas = Files.readAllLines (Paths.get("Practica7\\ficheros\\Ciudades.txt"));
@@ -25,8 +29,9 @@ public class TxtHelper {
                 );
                 ciudades.add(c);
             }
-        } catch (IOException e) {
-            System.out.println("No se ha podido abrir el fichero.");
+        } catch (Exception e) {
+            loggerCustom.escribirLog("No se ha podido procesar el fichero: "+ e.getMessage());
+            throw new FormatoInvalidoException("No se ha podido procesar el fichero");
         }
         return ciudades;
     }

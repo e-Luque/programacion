@@ -7,7 +7,25 @@
   {
     "nombre": "Luque",
     "raza": "Androide",
-    "nivel": 1
+    "nivel": 11
+  },
+  {
+    "nombre": "Evelyn",
+    "raza": "Humana",
+    "nivel": 5,
+    "equipoID": [
+      "W01",
+      "P01"
+    ]
+  },
+  {
+    "nombre": "Evelyn",
+    "raza": "Humana",
+    "nivel": 5,
+    "equipoID": [
+      "W01",
+      "P01"
+    ]
   },
   {
     "nombre": "Evelyn",
