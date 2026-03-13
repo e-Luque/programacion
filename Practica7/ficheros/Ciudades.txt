@@ -1,6 +1,6 @@
-Minas_Tirith;20000;Soleado;3
+Minas_Tirith;20000;Volcanico;3
 Isengard;5000;Nublado;8
-Rivendel;3000;Templado;2
+Rivendel;3000;Desertico;2
 Rohan;15000;Ventoso;6
 Gondor;25000;Soleado;5
 Mordor;50000;Seco;10

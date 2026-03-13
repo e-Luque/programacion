@@ -5,11 +5,13 @@ public class Items {
     private String nombre;
     private String tipo;
     private Integer valor;
-    public Items(String id, String nombre, String tipo, Integer valor){
+    private String nombre_ciudad;
+    public Items(String id, String nombre, String tipo, Integer valor, String nombre_ciudad){
         this.id = id;
         this.nombre = nombre;
         this.tipo = tipo;
         this.valor = valor;
+        this.nombre_ciudad = nombre_ciudad;
     }
 
     public String getNombre() {
@@ -22,6 +24,10 @@ public class Items {
 
     public String getId() {
         return id;
+    }
+
+    public String getNombre_ciudad() {
+        return nombre_ciudad;
     }
 
     public String getTipo() {

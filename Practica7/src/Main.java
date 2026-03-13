@@ -7,7 +7,7 @@ public class Main {
     public static void main(String[] args) throws RPGDataException {
         GestionMundo mundo = new GestionMundo();
         mundo.cargarTodo();
-        mundo.crearPersonaje("Evelyn","Humana",5, List.of("E01","P01"));
+        // mundo.crearPersonaje("Evelyn","Humana",5, List.of("P01","W01"),"Rivendel");
         mundo.guardarCambios();
     }
 }
