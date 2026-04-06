@@ -1,18 +1,18 @@
 package rpg.dao;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 public class ConexionBD {
 
-    private static final String URL = "/var/lib/postgresql/data";
+    private static final String URL = "jdbc:postgresql://localhost:5432/XRPG";
     private static final String USER = "xrpg_user";
     private static final String PASSWORD = "xrpg_password";
 
-    public Connection conectar() throws SQLException {
+    public ResultSet conectar(String consulta) throws SQLException {
         try {
-            return DriverManager.getConnection(URL, USER, PASSWORD);
+            Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+            Statement statement = connection.createStatement();
+            return statement.executeQuery(consulta);
         }
         catch (SQLException e){
             System.err.println("ERROR AL CONECTAR A LA BASE DE DATOS");
