@@ -1,6 +1,7 @@
 package rpg.utils;
 
 import rpg.dao.PersonajeDAO;
+import rpg.dao.RazaDAO;
 import rpg.model.*;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public class GestionDatos {
     };
     public void cargarTodo(){
         PersonajeDAO personajeDAO = new PersonajeDAO();
-        personajeDAO.cargarPersonajes();
+        listaPersonajes = personajeDAO.cargarPersonajes();
+        RazaDAO razaDAO = new RazaDAO();
+        listaRazas = razaDAO.cargarRazas();
     }
 }

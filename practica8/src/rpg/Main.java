@@ -1,13 +1,9 @@
 package rpg;
 
-import rpg.dao.ConexionBD;
-
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-
+import rpg.utils.GestionDatos;
 public class Main {
     public static void main(String[] args) {
+        GestionDatos gestionDatos = new GestionDatos();
+        gestionDatos.cargarTodo();
     }
 }

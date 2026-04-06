@@ -4,13 +4,15 @@ import rpg.model.Personaje;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PersonajeDAO {
     List<Personaje> listaPersonajes;
     public PersonajeDAO(){
+        this.listaPersonajes = new ArrayList<>();
     }
-    public void cargarPersonajes(){
+    public List<Personaje> cargarPersonajes(){
         try {
             ConexionBD conexionBD = new ConexionBD();
             ResultSet resultSet = conexionBD.conectar("SELECT * FROM PERSONAJES");
@@ -21,7 +23,8 @@ public class PersonajeDAO {
             }
         }
         catch (SQLException e){
-            System.err.println("Hola mundo");
+            System.err.println("Error al acceder a la base de datos, personajeDAO");
         }
+        return listaPersonajes;
     }
 }
