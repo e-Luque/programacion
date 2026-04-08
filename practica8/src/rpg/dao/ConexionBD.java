@@ -15,7 +15,7 @@ public class ConexionBD {
             return statement.executeQuery(consulta);
         }
         catch (SQLException e){
-            System.err.println("ERROR AL CONECTAR A LA BASE DE DATOS");
+            System.err.println("ERROR AL CONECTAR A LA BASE DE DATOS:" + e.getMessage());
         }
         return null;
     }
