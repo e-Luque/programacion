@@ -1,5 +1,8 @@
 package rpg.model;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Personaje {
     private int id;
     private String nombre;
@@ -9,6 +12,7 @@ public class Personaje {
     private Raza raza;
     private Clase clase;
     private Ciudad ciudad;
+    private List<Habilidad> habilidades;
 
     public Personaje(int id, String nombre, int nivel, int oro, int vidaActual,
                      Raza raza, Clase clase, Ciudad ciudad) {
@@ -20,5 +24,6 @@ public class Personaje {
         this.raza = raza;
         this.clase = clase;
         this.ciudad = ciudad;
+        this.habilidades = new ArrayList<>();
     }
 }

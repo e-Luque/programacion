@@ -1,9 +1,6 @@
 package rpg.dao;
 
-import rpg.model.Ciudad;
-import rpg.model.Clase;
-import rpg.model.Personaje;
-import rpg.model.Raza;
+import rpg.model.*;
 import rpg.utils.GestionDatos;
 
 import java.sql.ResultSet;
@@ -22,21 +19,33 @@ public class PersonajeDAO {
             ConexionBD conexionBD = new ConexionBD();
             ResultSet resultSet = conexionBD.conectar("SELECT * FROM PERSONAJES");
             while (resultSet.next()) {
-                // COMPRBACION CLASES ----
                 ClaseDAO claseDAO = new ClaseDAO();
                 claseDAO.cargarClases();
                 Clase clase = claseDAO.esClase(resultSet.getInt("id_clase"));
+
                 RazaDAO razaDAO = new RazaDAO();
                 razaDAO.cargarRazas();
                 Raza raza = razaDAO.esRaza(resultSet.getInt("id_raza"));
+
                 CiudadDAO ciudadDAO = new CiudadDAO();
                 ciudadDAO.cargarCiudades();
                 Ciudad ciudad = ciudadDAO.esCiudad(resultSet.getInt("id_ciudad_actual"));
+
+                HabilidadDAO habilidadDAO = new HabilidadDAO();
+                List<Habilidad> listaHabilidades = habilidadDAO.cargarHabilidades();
+                ResultSet habilidades_cargar = conexionBD.conectar("SELECT * FROM PERSONAJES_HABILIDADES");
 
                 if(clase != null && raza != null && ciudad != null){
                     listaPersonajes.add(new Personaje(resultSet.getInt("id"), resultSet.getString("nombre"),
                             resultSet.getInt("nivel"), resultSet.getInt("oro"), resultSet.getInt("vida_actual"),
                             raza, clase , ciudad));
+                    for (Habilidad habilidad : listaHabilidades){
+                        while(habilidades_cargar.next()){
+                            if ((habilidad.getId() = habilidades_cargar.getInt("id_habilidad")) &&
+                                    (resultSet.getInt("id") = habilidades_cargar.getInt("id_personaje"))){
+                            }
+                        }
+                    }
                 }
                 else{
                     error_contador++;

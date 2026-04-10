@@ -15,4 +15,11 @@ public class Habilidad {
         this.clase = clase;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
 }
