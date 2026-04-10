@@ -1,6 +1,7 @@
 package rpg.dao;
 
 import rpg.model.Ciudad;
+import rpg.model.Clase;
 import rpg.model.Raza;
 
 import java.sql.ResultSet;
@@ -28,5 +29,13 @@ public class CiudadDAO {
             System.err.println("Error al acceder a la base de datos, ciudadDAO");
         }
         return listaCiudades;
+    }
+    public Ciudad esCiudad(int id_ciudad){
+        for (int i = 0; i < listaCiudades.size(); i++) {
+            if (id_ciudad == listaCiudades.get(i).getId()){
+                return listaCiudades.get(i);
+            }
+        }
+        return null;
     }
 }

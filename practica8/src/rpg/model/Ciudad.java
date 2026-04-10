@@ -10,4 +10,8 @@ public class Ciudad {
         this.nombre = nombre;
         this.nivelMinimoAcceso = nivelMinimoAcceso;
     }
+
+    public int getId() {
+        return id;
+    }
 }

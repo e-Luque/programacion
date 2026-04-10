@@ -17,6 +17,7 @@ public class ClaseDAO {
         try {
             ConexionBD conexionBD = new ConexionBD();
             ResultSet resultSet = conexionBD.conectar("SELECT * FROM CLASES_RPG");
+
             while (resultSet.next()) {
                 listaClases.add(new Clase(resultSet.getInt("id"), resultSet.getString("nombre")));
             }
@@ -26,5 +27,14 @@ public class ClaseDAO {
             System.err.println("Error al acceder a la base de datos, claseDAO");
         }
         return this.listaClases;
+    }
+
+    public Clase esClase(int id_clase){
+        for (int i = 0; i < listaClases.size(); i++) {
+            if (id_clase == listaClases.get(i).getId()){
+                return listaClases.get(i);
+            }
+        }
+        return null;
     }
 }

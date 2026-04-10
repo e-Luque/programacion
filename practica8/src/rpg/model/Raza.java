@@ -12,4 +12,8 @@ public class Raza {
         this.bonificadorVida = bonificadorVida;
         this.bonificadorFuerza = bonificadorFuerza;
     }
+
+    public int getId() {
+        return id;
+    }
 }

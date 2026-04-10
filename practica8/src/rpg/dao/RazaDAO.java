@@ -1,5 +1,6 @@
 package rpg.dao;
 
+import rpg.model.Clase;
 import rpg.model.Personaje;
 import rpg.model.Raza;
 
@@ -21,10 +22,19 @@ public class RazaDAO {
                 razas.add(new Raza(resultSet.getInt("id"), resultSet.getString("nombre"),
                         resultSet.getInt("bonificador_vida"), resultSet.getInt("bonificador_fuerza")));
             }
+
         }
         catch (SQLException e){
             System.err.println("Error al acceder a la base de datos, razaDAO");
         }
         return razas;
+    }
+    public Raza esRaza(int id_raza){
+        for (int i = 0; i < razas.size(); i++) {
+            if (id_raza == razas.get(i).getId()){
+                return razas.get(i);
+            }
+        }
+        return null;
     }
 }
