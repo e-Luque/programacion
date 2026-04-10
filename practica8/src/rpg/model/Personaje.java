@@ -26,4 +26,8 @@ public class Personaje {
         this.ciudad = ciudad;
         this.habilidades = new ArrayList<>();
     }
+
+    public void añadirHabilidad(Habilidad habilidad){
+        habilidades.add(habilidad)
+    }
 }

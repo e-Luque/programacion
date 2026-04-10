@@ -18,6 +18,11 @@ public class PersonajeDAO {
             Integer error_contador = 0;
             ConexionBD conexionBD = new ConexionBD();
             ResultSet resultSet = conexionBD.conectar("SELECT * FROM PERSONAJES");
+
+            HabilidadDAO habilidadDAO = new HabilidadDAO();
+            List<Habilidad> listaHabilidades = habilidadDAO.cargarHabilidades();
+            ResultSet habilidades_cargar = conexionBD.conectar("SELECT * FROM PERSONAJES_HABILIDADES");
+
             while (resultSet.next()) {
                 ClaseDAO claseDAO = new ClaseDAO();
                 claseDAO.cargarClases();
@@ -31,26 +36,27 @@ public class PersonajeDAO {
                 ciudadDAO.cargarCiudades();
                 Ciudad ciudad = ciudadDAO.esCiudad(resultSet.getInt("id_ciudad_actual"));
 
-                HabilidadDAO habilidadDAO = new HabilidadDAO();
-                List<Habilidad> listaHabilidades = habilidadDAO.cargarHabilidades();
-                ResultSet habilidades_cargar = conexionBD.conectar("SELECT * FROM PERSONAJES_HABILIDADES");
-
                 if(clase != null && raza != null && ciudad != null){
                     listaPersonajes.add(new Personaje(resultSet.getInt("id"), resultSet.getString("nombre"),
                             resultSet.getInt("nivel"), resultSet.getInt("oro"), resultSet.getInt("vida_actual"),
                             raza, clase , ciudad));
-                    for (Habilidad habilidad : listaHabilidades){
-                        while(habilidades_cargar.next()){
-                            if ((habilidad.getId() = habilidades_cargar.getInt("id_habilidad")) &&
-                                    (resultSet.getInt("id") = habilidades_cargar.getInt("id_personaje"))){
-                            }
-                        }
-                    }
                 }
                 else{
                     error_contador++;
                 }
+            }
+            while (habilidades_cargar.next(){
+                for (int i = 0; i < listaPersonajes.size(); i++) {
+                    for (Habilidad habilidad : listaHabilidades){
+                        while(habilidades_cargar.next()){
+                            if ((habilidad.getId() = habilidades_cargar.getInt("id_habilidad")) &&
+                                    (resultSet.getInt("id") = habilidades_cargar.getInt("id_personaje"))){
+                                listaPersonajes.get(i).
+                            }
+                        }
+                    }
                 }
+            }
         }
         catch (SQLException e){
             System.err.println("Error al acceder a la base de datos, personajeDAO");
