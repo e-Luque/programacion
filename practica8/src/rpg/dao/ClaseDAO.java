@@ -13,16 +13,18 @@ public class ClaseDAO {
     public ClaseDAO(){
         this.listaClases = new ArrayList<>();
     }
-    try {
-        ConexionBD conexionBD = new ConexionBD();
-        ResultSet resultSet = conexionBD.conectar("SELECT * FROM CLASES_RPG");
-        while (resultSet.next()) {
-            listaClases.add(new Clase(resultSet.getInt("id"), resultSet.getString("nombre")));
+    public List<Clase> cargarClases(){
+        try {
+            ConexionBD conexionBD = new ConexionBD();
+            ResultSet resultSet = conexionBD.conectar("SELECT * FROM CLASES_RPG");
+            while (resultSet.next()) {
+                listaClases.add(new Clase(resultSet.getInt("id"), resultSet.getString("nombre")));
+            }
         }
-    }
-    catch (
-    SQLException e){
-        System.err.println("Error al acceder a la base de datos, claseDAO");
-    }
+        catch (
+                SQLException e){
+            System.err.println("Error al acceder a la base de datos, claseDAO");
+        }
         return this.listaClases;
+    }
 }
