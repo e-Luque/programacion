@@ -45,13 +45,13 @@ public class PersonajeDAO {
                     error_contador++;
                 }
             }
-            while (habilidades_cargar.next(){
+            while (habilidades_cargar.next()){
                 for (int i = 0; i < listaPersonajes.size(); i++) {
                     for (Habilidad habilidad : listaHabilidades){
                         while(habilidades_cargar.next()){
-                            if ((habilidad.getId() = habilidades_cargar.getInt("id_habilidad")) &&
-                                    (resultSet.getInt("id") = habilidades_cargar.getInt("id_personaje"))){
-                                listaPersonajes.get(i).
+                            if ((habilidad.getId() == habilidades_cargar.getInt("id_habilidad")) &&
+                                    (resultSet.getInt("id") == habilidades_cargar.getInt("id_personaje"))){
+                                listaPersonajes.get(i).añadirHabilidad(habilidad);
                             }
                         }
                     }

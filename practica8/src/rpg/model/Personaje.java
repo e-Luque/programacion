@@ -28,6 +28,6 @@ public class Personaje {
     }
 
     public void añadirHabilidad(Habilidad habilidad){
-        habilidades.add(habilidad)
+        habilidades.add(habilidad);
     }
 }
