@@ -5,13 +5,14 @@ public class Habilidad {
     private String nombre;
     private int danoBase;
     private int usosMaximos;
-    private int idClase;
+    private Clase clase;
 
-    public Habilidad(int id, String nombre, int danoBase, int usosMaximos, int idClase) {
+    public Habilidad(int id, String nombre, int danoBase, int usosMaximos, Clase clase) {
         this.id = id;
         this.nombre = nombre;
         this.danoBase = danoBase;
         this.usosMaximos = usosMaximos;
-        this.idClase = idClase;
+        this.clase = clase;
     }
+
 }
