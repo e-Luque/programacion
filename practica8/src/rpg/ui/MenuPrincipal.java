@@ -34,6 +34,7 @@ public class MenuPrincipal {
                     MenuPersonajes menuPersonajes = new MenuPersonajes(datos);
                     break;
                 case 2:
+                    MenuTienda menuTienda = new MenuTienda(datos);
                     break;
                 case 3:
                     break;
