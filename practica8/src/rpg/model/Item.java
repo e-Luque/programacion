@@ -16,4 +16,28 @@ public class Item {
         this.bonificadorAtaque = bonificadorAtaque;
         this.bonificadorDefensa = bonificadorDefensa;
     }
+
+    public int getPrecioOro() {
+        return precioOro;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public int getBonificadorAtaque() {
+        return bonificadorAtaque;
+    }
+
+    public int getBonificadorDefensa() {
+        return bonificadorDefensa;
+    }
 }

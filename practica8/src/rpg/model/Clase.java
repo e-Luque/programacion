@@ -12,4 +12,8 @@ public class Clase {
     public int getId() {
         return id;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
 }

@@ -19,4 +19,13 @@ public class ConexionBD {
         }
         return null;
     }
+    public int ejecutarUpdate(String consulta) throws SQLException {
+        try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
+             Statement statement = connection.createStatement()) {
+            return statement.executeUpdate(consulta);
+        } catch (SQLException e) {
+            System.err.println("ERROR DE UPDATE: " + e.getMessage());
+            return 0;
+        }
+    }
 }

@@ -30,4 +30,52 @@ public class Personaje {
     public void añadirHabilidad(Habilidad habilidad){
         habilidades.add(habilidad);
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public Clase getClase() {
+        return clase;
+    }
+
+    public int getOro() {
+        return oro;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setOro(int oro) {
+        this.oro = oro;
+    }
+
+    public int getVidaActual() {
+        return vidaActual;
+    }
+
+    public Ciudad getCiudad() {
+        return ciudad;
+    }
+
+    public int getNivel() {
+        return nivel;
+    }
+
+    public List<Habilidad> getHabilidades() {
+        return habilidades;
+    }
+
+    public Raza getRaza() {
+        return raza;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setCiudad(Ciudad ciudad) {
+        this.ciudad = ciudad;
+    }
 }

@@ -50,6 +50,34 @@ public class GestionDatos {
             throw new RuntimeException(e);
         }
 
-        MenuPrincipal menuPrincipal = new MenuPrincipal();
+        MenuPrincipal menuPrincipal = new MenuPrincipal(this);
+    }
+
+    public List<Ciudad> getListaCiudades() {
+        return listaCiudades;
+    }
+
+    public List<Habilidad> getListaHabilidades() {
+        return listaHabilidades;
+    }
+
+    public List<Personaje> getListaPersonajes() {
+        return listaPersonajes;
+    }
+
+    public List<Clase> getListaClases() {
+        return listaClases;
+    }
+
+    public List<Inventario> getInventarios() {
+        return inventarios;
+    }
+
+    public List<Item> getListaItems() {
+        return listaItems;
+    }
+
+    public List<Raza> getListaRazas() {
+        return listaRazas;
     }
 }

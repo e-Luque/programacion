@@ -14,4 +14,12 @@ public class Ciudad {
     public int getId() {
         return id;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getNivelMinimoAcceso() {
+        return nivelMinimoAcceso;
+    }
 }

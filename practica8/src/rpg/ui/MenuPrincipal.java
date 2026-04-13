@@ -1,11 +1,15 @@
 package rpg.ui;
 
 
+import rpg.utils.GestionDatos;
+
 import java.util.Scanner;
 
 public class MenuPrincipal {
+    private GestionDatos datos;
     private Scanner scanner;
-    public MenuPrincipal(){
+    public MenuPrincipal(GestionDatos datos){
+        this.datos = datos;
         this.scanner = new Scanner(System.in);
         cargarMenu();
     }
@@ -27,7 +31,7 @@ public class MenuPrincipal {
             opcion = scanner.nextInt();
             switch (opcion) {
                 case 1:
-                    MenuPersonajes menuPersonajes = new MenuPersonajes();
+                    MenuPersonajes menuPersonajes = new MenuPersonajes(datos);
                     break;
                 case 2:
                     break;
