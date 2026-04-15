@@ -13,6 +13,7 @@ public class Personaje {
     private Clase clase;
     private Ciudad ciudad;
     private List<Habilidad> habilidades;
+    private List<Item> inventario;
 
     public Personaje(int id, String nombre, int nivel, int oro, int vidaActual,
                      Raza raza, Clase clase, Ciudad ciudad) {
@@ -25,12 +26,16 @@ public class Personaje {
         this.clase = clase;
         this.ciudad = ciudad;
         this.habilidades = new ArrayList<>();
+        this.inventario = new ArrayList<>();
     }
 
     public void añadirHabilidad(Habilidad habilidad){
         habilidades.add(habilidad);
     }
 
+    public void añadirItem(Item item) {
+        this.inventario.add(item);
+    }
     public int getId() {
         return id;
     }
@@ -77,5 +82,18 @@ public class Personaje {
 
     public void setCiudad(Ciudad ciudad) {
         this.ciudad = ciudad;
+    }
+
+    public void setVidaActual(int vidaActual) {
+        this.vidaActual = vidaActual;
+    }
+    public List<Item> getInventario() {
+        return inventario;
+    }
+
+    public void restablecerHabilidades() {
+        for (Habilidad h : this.habilidades) {
+            h.setUsosActuales(h.getUsosMaximos());
+        }
     }
 }

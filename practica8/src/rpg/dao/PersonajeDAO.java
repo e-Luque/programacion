@@ -7,13 +7,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class PersonajeDAO {
-    List<Personaje> listaPersonajes;
+    private List<Personaje> listaPersonajes;
 
     public PersonajeDAO() {
         this.listaPersonajes = new ArrayList<>();
     }
 
-    public List<Personaje> cargarPersonajes() {
+    public List<Personaje> cargarPersonajes(List<Item> items) {
         try {
             ConexionBD conexionBD = new ConexionBD();
 
@@ -32,7 +32,6 @@ public class PersonajeDAO {
 
 
             ResultSet rsPerso = conexionBD.conectar("SELECT * FROM PERSONAJES");
-
             while (rsPerso.next()) {
 
                 Clase clase = claseDAO.esClase(rsPerso.getInt("id_clase"));
@@ -71,6 +70,19 @@ public class PersonajeDAO {
                     }
                 }
             }
+            for(Personaje p : listaPersonajes) {
+                ResultSet rsInv = conexionBD.conectar("SELECT id_item FROM INVENTARIOS WHERE id_personaje = " + p.getId());
+
+                while (rsInv.next()) {
+                    int idItemBuscado = rsInv.getInt("id_item");
+                    for (Item i : items) {
+                        if (i.getId() == idItemBuscado) {
+                            p.añadirItem(i);
+                        }
+                    }
+                }
+            }
+
         } catch (SQLException e) {
             System.err.println("Error en PersonajeDAO: " + e.getMessage());
         }

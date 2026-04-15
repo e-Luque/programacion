@@ -29,13 +29,13 @@ public class GestionDatos {
         listaCiudades = ciudadDAO.cargarCiudades();
         System.out.println("¡Ciudades cargadas con exito! NºCiudades: "+listaCiudades.size());
 
-        PersonajeDAO personajeDAO = new PersonajeDAO();
-        listaPersonajes = personajeDAO.cargarPersonajes();
-        System.out.println("¡Personajes cargados con exito! NºPersonajes: "+listaPersonajes.size());
-
         ItemDAO itemDAO = new ItemDAO();
         listaItems = itemDAO.cargarItems();
         System.out.println("¡Items cargados con exito! NºItems: "+listaItems.size());
+
+        PersonajeDAO personajeDAO = new PersonajeDAO();
+        listaPersonajes = personajeDAO.cargarPersonajes(listaItems);
+        System.out.println("¡Personajes cargados con exito! NºPersonajes: "+listaPersonajes.size());
 
         HabilidadDAO habilidadDAO = new HabilidadDAO();
         listaHabilidades = habilidadDAO.cargarHabilidades();

@@ -91,6 +91,7 @@ public class MenuPersonajes {
                     }
                     break;
                 case 3:
+
                     break;
                 default:
                     System.out.println("SE HA ESCOGIDO UNA OPCIÓN INCORRECTA, SE VA A REGRESAR AL MENU PRINCIPAL...");

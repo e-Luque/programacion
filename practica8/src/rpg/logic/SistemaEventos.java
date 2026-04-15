@@ -8,12 +8,12 @@ public class SistemaEventos {
         Iterator<Personaje> it = personajes.iterator();
         while (it.hasNext()) {
             Personaje p = it.next();
-            if (p.getOro() >= 10) {
-                p.setOro(p.getOro() - 10);
+            if (p.getOro() >= 20) {
+                p.setOro(p.getOro() - 20);
                 System.out.println(p.getNombre() + " ha pagado 10 de oro.");
             } else {
                 System.out.println(p.getNombre() + " no tiene dinero y es desterrado.");
-                it.remove(); // Requisito del PDF
+                it.remove();
             }
         }
     }
