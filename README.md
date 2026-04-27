@@ -18,6 +18,7 @@ Repositorio dedicado a las prácticas de programación de **1ºDAW**
 | 5  | Práctica 5 | ✅ Finalizada       |
 | 6  | Práctica 6 | 🟨 Casi Finalizada |
 | 7  | Práctica 7 | ✅ Finalizada       |
+| 8  | Práctica 8 | ✅ Finalizada       |
 
 
 ## Estructura del Repositorio
@@ -113,13 +114,86 @@ programacion/
 │       ├── Bloque2.java
 │       ├── Bloque3.java
 │       └── Main.java
+├── Practica7/
+│   ├── Practica7.iml
+│   ├── ficheros/
+│   │   ├── Ciudades.txt
+│   │   ├── Personajes.json
+│   │   ├── errores.log
+│   │   └── items.json
+│   └── src/
+│       ├── Main.java
+│       └── com/
+│           └── rpg/
+│               ├── handler/
+│               │   ├── DatoInvalidoException.java
+│               │   ├── FormatoInvalidoException.java
+│               │   ├── RPGDataException.java
+│               │   └── RecursoNoEncontradoException.java
+│               ├── model/
+│               │   ├── Ciudades.java
+│               │   ├── Items.java
+│               │   └── Personajes.java
+│               ├── services/
+│               │   └── GestionMundo.java
+│               └── utils/
+│                   ├── JsonHelper.java
+│                   ├── LoggerCustom.java
+│                   └── TxtHelper.java
 ├── PracticaPOO/
 │   ├── PracticaPOO.iml
 │   └── src/
 │       ├── Main.java
 │       └── Usuario.java
 ├── Programacion.iml
-└── README.md
+├── README.md
+├── generar_proyecto_xrpg.sh
+└── practica8/
+    ├── entorno_bd/
+    │   ├── docker-compose.yml
+    │   └── init.sql
+    ├── lib/
+    │   └── postgresql-42.7.1.jar
+    ├── practica8.iml
+    └── src/
+        └── rpg/
+            ├── Main.java
+            ├── dao/
+            │   ├── CiudadDAO.java
+            │   ├── ClaseDAO.java
+            │   ├── ConexionBD.java
+            │   ├── HabilidadDAO.java
+            │   ├── InventarioDAO.java
+            │   ├── ItemDAO.java
+            │   ├── PersonajeDAO.java
+            │   └── RazaDAO.java
+            ├── exception/
+            │   ├── BDException.java
+            │   ├── FondosInsuficientesException.java
+            │   ├── LimiteHabilidadesException.java
+            │   └── NivelInsuficienteException.java
+            ├── logic/
+            │   ├── EstadisticasService.java
+            │   ├── MotorCombate.java
+            │   ├── SistemaEventos.java
+            │   ├── SistemaPersonajes.java
+            │   └── SistemaTienda.java
+            ├── model/
+            │   ├── Ciudad.java
+            │   ├── Clase.java
+            │   ├── Habilidad.java
+            │   ├── Inventario.java
+            │   ├── Item.java
+            │   ├── Personaje.java
+            │   └── Raza.java
+            ├── ui/
+            │   ├── MenuCombate.java
+            │   ├── MenuPersonajes.java
+            │   ├── MenuPrincipal.java
+            │   └── MenuTienda.java
+            └── utils/
+                ├── GestionDatos.java
+                └── LoggerCustom.java
 ```
 # 📋 Ejercicios de las Practicas:
 
